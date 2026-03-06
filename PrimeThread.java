@@ -83,7 +83,7 @@ public class PrimeThread{
        
        //comment the following line out once you've seen how this works.
        for(int i = 0; i < threadArr.length; i++){
-        if(i != threadArr.length){
+        if(i < threadArr.length-1){
             threadArr[i] = new CountPrimesThread(low, (max + low)/2);
             threadArr[i].start();
             low = (max + low)/2;
